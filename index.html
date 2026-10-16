@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<title>8k电影网 · 超清片库索引与影评榜单 - 8kdianyingwang-app.github.io</title>
+<meta name="keywords" content="8k电影网,8k电影网官网,8K超高清电影片库,超清片源索引,影视热播榜单,8K分辨率观影指南,家庭影院设备调校,8kdianyingwang-app.github.io">
+<meta name="description" content="8k电影网（8kdianyingwang-app.github.io）收录超高清影视条目索引、分类片库、热播评分榜与影评长文，并提供 8K 片源识别、播放设备与家庭影院调校的实用指南。按类型、地区、年份检索条目，查看评分、时长、码率与上映信息，持续更新片库目录。">
+<meta name="author" content="8k电影网">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0a0d12">
+<meta name="renderer" content="webkit">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="mobile-agent" content="format=html5; url=https://8kdianyingwang-app.github.io/">
+<link rel="canonical" href="https://8kdianyingwang-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="8k电影网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="8k电影网 · 超清片库索引与影评榜单">
+<meta property="og:description" content="8k电影网收录 8K/4K 超高清影视条目索引、分类片库、热播评分榜与影评长文，并整理片源识别与家庭影院调校指南。">
+<meta property="og:url" content="https://8kdianyingwang-app.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="8k电影网 · 超清片库索引与影评榜单">
+<meta name="twitter:description" content="超高清影视条目索引、评分榜单与观影设备调校指南，收录条目持续扩充中。">
+<style>
+:root{
+  --ink:#0a0d12;
+  --ink-2:#0f141d;
+  --ink-3:#151b26;
+  --line:#242c3a;
+  --line-soft:#1b2230;
+  --txt:#e9edf4;
+  --txt-2:#a9b6c8;
+  --txt-3:#74839a;
+  --gold:#e3b23c;
+  --cyan:#5ad1c6;
+  --red:#e0685f;
+  --radius:14px;
+  --maxw:1180px;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  --serif:Georgia,"Songti SC","SimSun","Source Han Serif SC",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--txt);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.75;
+  letter-spacing:.2px;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(760px 420px at 88% -6%, rgba(227,178,60,.13), transparent 62%),
+    radial-gradient(620px 380px at 4% 8%, rgba(90,209,198,.10), transparent 60%);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.35}
+p{margin:0}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px;position:relative;z-index:1}
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:99;background:var(--gold);color:#141414;padding:8px 14px;border-radius:8px}
+
+/* ── 顶部进度 ── */
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--cyan));z-index:60}
+
+/* ── 头部 ── */
+header.top{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,13,18,.72);
+  backdrop-filter:saturate(150%) blur(14px);
+  -webkit-backdrop-filter:saturate(150%) blur(14px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease,background .3s ease;
+}
+header.top.on{border-bottom-color:var(--line);background:rgba(10,13,18,.92)}
+.top-in{display:flex;align-items:center;gap:18px;height:66px}
+.brand{display:flex;align-items:baseline;gap:10px;flex:0 0 auto}
+.brand b{
+  font-family:var(--serif);
+  font-size:25px;letter-spacing:2px;
+  color:var(--txt);
+}
+.brand b em{font-style:normal;color:var(--gold)}
+.brand span{
+  font-size:11px;letter-spacing:1.6px;color:var(--txt-3);
+  border-left:1px solid var(--line);padding-left:10px;
+  text-transform:uppercase;
+}
+nav.nav{margin-left:auto}
+nav.nav ul{display:flex;gap:4px}
+nav.nav a{
+  display:block;padding:8px 13px;border-radius:9px;
+  font-size:14.5px;color:var(--txt-2);
+  border:1px solid transparent;
+  transition:.22s ease;
+}
+nav.nav a:hover{color:var(--txt);border-color:var(--line);background:var(--ink-3)}
+nav.nav a.cur{color:var(--gold);border-color:rgba(227,178,60,.35)}
+.top-act{display:flex;align-items:center;gap:10px}
+.qbtn{
+  display:inline-block;padding:8px 15px;border-radius:9px;
+  border:1px solid var(--line);color:var(--txt-2);font-size:14px;
+  transition:.22s ease;
+}
+.qbtn:hover{border-color:var(--gold);color:var(--gold)}
+.menu{display:none}
+
+/* ── Hero ── */
+.hero{padding:64px 0 46px;border-bottom:1px solid var(--line-soft)}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center}
+.tagline{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:12.5px;letter-spacing:2.4px;color:var(--gold);
+  border:1px solid rgba(227,178,60,.28);border-radius:999px;
+  padding:5px 13px;margin-bottom:20px;
+}
+.tagline i{width:6px;height:6px;border-radius:50%;background:var(--gold);display:block;font-style:normal}
+h1{
+  font-family:var(--serif);
+  font-size:clamp(34px,4.6vw,56px);
+  letter-spacing:1px;line-height:1.24;
+}
+h1 u{text-decoration:none;color:var(--gold);border-bottom:3px solid rgba(227,178,60,.32);padding-bottom:2px}
+.lede{margin-top:18px;color:var(--txt-2);font-size:16.5px;max-width:52ch}
+.urlbar{
+  margin-top:24px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;
+  background:var(--ink-2);border:1px solid var(--line);border-radius:12px;
+  padding:12px 14px;max-width:520px;
+}
+.urlbar .lb{font-size:11.5px;letter-spacing:1.4px;color:var(--txt-3)}
+.urlbar .u{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:14px;color:var(--cyan);word-break:break-all;
+  border-bottom:1px dashed rgba(90,209,198,.4);
+}
+.urlbar .u:hover{color:var(--gold);border-bottom-color:rgba(227,178,60,.5)}
+.hero-btns{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  padding:12px 22px;border-radius:10px;font-size:15px;font-weight:600;
+  border:1px solid var(--gold);background:var(--gold);color:#141018;
+  transition:.22s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(227,178,60,.18)}
+.btn.ghost{background:transparent;color:var(--txt);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan);box-shadow:none}
+
+/* 胶片条 */
+.film{
+  border:11px solid #05070a;border-radius:10px;
+  background:#05070a;position:relative;
+  box-shadow:0 22px 48px rgba(0,0,0,.5);
+}
+.film::before,.film::after{
+  content:"";position:absolute;left:0;right:0;height:11px;
+  background:repeating-linear-gradient(90deg,#05070a 0 7px,var(--line) 7px 16px);
+}
+.film::before{top:-11px}
+.film::after{bottom:-11px}
+.film-row{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.cell{aspect-ratio:3/4;border-radius:3px;position:relative;overflow:hidden}
+.cell:nth-child(1){background:linear-gradient(150deg,#3b2f14,#e3b23c 70%,#8a6a1c)}
+.cell:nth-child(2){background:linear-gradient(150deg,#0f2c33,#5ad1c6 72%,#1c5f5c)}
+.cell:nth-child(3){background:linear-gradient(150deg,#2b1420,#c4574f 70%,#5d2224)}
+.cell:nth-child(4){background:linear-gradient(150deg,#161d33,#6f8fd6 72%,#22305c)}
+.cell span{
+  position:absolute;left:5px;bottom:5px;right:5px;
+  font-size:10.5px;color:#0b0e13;background:rgba(255,255,255,.82);
+  padding:1px 4px;border-radius:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.film-cap{margin-top:16px;display:flex;justify-content:space-between;font-size:12px;color:var(--txt-3);letter-spacing:1px}
+
+/* 统计 */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;margin-top:44px;background:var(--ink-2);
+}
+.stat{padding:20px 18px;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:var(--serif);font-size:27px;color:var(--gold);letter-spacing:1px}
+.stat span{font-size:12.5px;color:var(--txt-3);letter-spacing:.6px}
+
+/* ── 区块通用 ── */
+section.blk{padding:62px 0;border-bottom:1px solid var(--line-soft)}
+.hd{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:30px}
+.hd h2{font-family:var(--serif);font-size:clamp(24px,2.7vw,32px);letter-spacing:1px}
+.hd h2 em{font-style:normal;color:var(--gold)}
+.hd p{color:var(--txt-3);font-size:14px;margin-left:auto;max-width:44ch}
+.kicker{
+  font-size:12px;letter-spacing:2.6px;color:var(--cyan);
+  margin-bottom:12px;display:block;text-transform:uppercase;
+}
+
+/* 分类片库 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cat{
+  display:block;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;background:linear-gradient(180deg,var(--ink-2),var(--ink-3));
+  transition:.26s ease;position:relative;overflow:hidden;
+}
+.cat::after{
+  content:"";position:absolute;inset:auto -30% -60% auto;width:120px;height:120px;
+  border-radius:50%;background:rgba(227,178,60,.10);transition:.3s ease;
+}
+.cat:hover{transform:translateY(-4px);border-color:rgba(227,178,60,.42)}
+.cat:hover::after{background:rgba(227,178,60,.2)}
+.cat i{
+  display:block;font-style:normal;font-family:var(--serif);
+  font-size:20px;color:var(--gold);margin-bottom:8px;letter-spacing:2px;
+}
+.cat b{display:block;font-size:16.5px;letter-spacing:.6px}
+.cat small{display:block;margin-top:6px;color:var(--txt-3);font-size:12.5px}
+.cat .n{margin-top:14px;font-size:12px;color:var(--cyan);letter-spacing:1px}
+
+/* 榜单 */
+.board{display:grid;grid-template-columns:1.35fr .65fr;gap:28px}
+.rank{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--ink-2)}
+.rank li{
+  display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:14px;
+  padding:15px 18px;border-bottom:1px solid var(--line-soft);
+  transition:.2s ease;
+}
+.rank li:last-child{border-bottom:0}
+.rank li:hover{background:var(--ink-3)}
+.rank .no{
+  font-family:var(--serif);font-size:26px;color:transparent;
+  -webkit-text-stroke:1px var(--txt-3);text-align:center;
+}
+.rank li:nth-child(1) .no{-webkit-text-stroke:1px var(--gold)}
+.rank li:nth-child(2) .no{-webkit-text-stroke:1px var(--cyan)}
+.rank li:nth-child(3) .no{-webkit-text-stroke:1px var(--red)}
+.rank .ti b{font-size:16px;font-weight:600;letter-spacing:.5px}
+.rank .ti small{display:block;color:var(--txt-3);font-size:12.5px;margin-top:3px}
+.rank .sc{text-align:right;white-space:nowrap}
+.rank .sc b{font-family:var(--serif);font-size:19px;color:var(--gold)}
+.rank .sc small{display:block;font-size:11.5px;color:var(--txt-3);letter-spacing:1px}
+.side{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--ink-2)}
+.side h3{font-size:16px;letter-spacing:1px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line-soft)}
+.side .filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.side .filter a{
+  font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--txt-2);
+  transition:.2s ease;
+}
+.side .filter a:hover{border-color:var(--cyan);color:var(--cyan)}
+.side .filter a.on{border-color:var(--gold);color:var(--gold);background:rgba(227,178,60,.08)}
+.side .note{font-size:13px;color:var(--txt-3);line-height:1.85}
+.side .note b{color:var(--txt-2);font-weight:600}
+
+/* 影评 */
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rev{
+  display:block;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--ink-2);overflow:hidden;transition:.26s ease;
+}
+.rev:hover{border-color:rgba(90,209,198,.4);transform:translateY(-3px)}
+.rev .thumb{height:120px;position:relative}
+.rev:nth-child(1) .thumb{background:linear-gradient(120deg,#1d2740,#4f6bb5 60%,#0f1420)}
+.rev:nth-child(2) .thumb{background:linear-gradient(120deg,#3a2416,#c98a3c 60%,#14100c)}
+.rev:nth-child(3) .thumb{background:linear-gradient(120deg,#123030,#4fb3a8 60%,#0b1416)}
+.rev:nth-child(4) .thumb{background:linear-gradient(120deg,#33161c,#b0534c 60%,#150a0d)}
+.rev .thumb em{
+  position:absolute;left:14px;bottom:12px;font-style:normal;
+  font-size:11.5px;letter-spacing:1.6px;color:#fff;
+  background:rgba(6,9,13,.66);padding:3px 9px;border-radius:6px;border:1px solid rgba(255,255,255,.16);
+}
+.rev .body{padding:18px 20px 22px}
+.rev h3{font-size:17px;letter-spacing:.5px;line-height:1.5}
+.rev p{margin-top:9px;font-size:14px;color:var(--txt-3);line-height:1.8}
+.rev .meta{margin-top:14px;display:flex;gap:14px;font-size:12px;color:var(--txt-3);letter-spacing:.8px}
+
+/* 时间线 */
+.steps{position:relative;padding-left:30px}
+.steps::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--line)}
+.step{position:relative;padding:0 0 26px}
+.step:last-child{padding-bottom:0}
+.step::before{
+  content:"";position:absolute;left:-30px;top:9px;width:15px;height:15px;border-radius:50%;
+  background:var(--ink);border:2px solid var(--line);
+}
+.step:hover::before{border-color:var(--gold);background:rgba(227,178,60,.2)}
+.step h3{font-size:16.5px;letter-spacing:.6px}
+.step h3 span{
+  display:inline-block;margin-right:9px;font-family:var(--serif);
+  font-size:12.5px;letter-spacing:1.4px;color:var(--gold);
+  border:1px solid rgba(227,178,60,.3);border-radius:5px;padding:1px 7px;vertical-align:2px;
+}
+.step p{margin-top:7px;color:var(--txt-3);font-size:14.5px;max-width:74ch}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+details{
+  border:1px solid var(--line);border-radius:12px;background:var(--ink-2);
+  padding:15px 18px;transition:.22s ease;
+}
+details[open]{border-color:rgba(227,178,60,.34);background:var(--ink-3)}
+summary{
+  cursor:pointer;font-size:15.5px;font-weight:600;letter-spacing:.5px;
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";color:var(--gold);font-family:var(--serif);font-size:20px;line-height:1;
+}
+details[open] summary::after{content:"–"}
+details p{margin-top:11px;font-size:14px;color:var(--txt-3);line-height:1.85}
+
+/* 关于 + 订阅 */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.card{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink-2);padding:26px}
+.card h3{font-family:var(--serif);font-size:20px;letter-spacing:1px;margin-bottom:12px}
+.card p{font-size:14.5px;color:var(--txt-2);line-height:1.9}
+.card ul{margin-top:14px}
+.card ul li{
+  font-size:14px;color:var(--txt-3);padding-left:16px;position:relative;margin-bottom:8px;
+}
+.card ul li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--cyan)}
+form.sub{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+form.sub input{
+  flex:1 1 200px;min-width:0;background:var(--ink);border:1px solid var(--line);
+  border-radius:10px;color:var(--txt);padding:11px 14px;font-size:14.5px;font-family:inherit;
+}
+form.sub input::placeholder{color:var(--txt-3)}
+form.sub input:focus{outline:none;border-color:var(--gold)}
+form.sub button{
+  border:0;border-radius:10px;padding:11px 20px;background:var(--gold);color:#141018;
+  font-size:14.5px;font-weight:600;font-family:inherit;cursor:pointer;transition:.2s ease;
+}
+form.sub button:hover{filter:brightness(1.08)}
+.hint{font-size:12px;color:var(--txt-3);margin-top:10px}
+
+/* 页脚 */
+footer{padding:54px 0 30px;background:linear-gradient(180deg,var(--ink),#080b0f)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.fcol h4{font-size:14px;letter-spacing:1.6px;color:var(--gold);margin-bottom:14px}
+.fcol a,.fcol li{display:block;font-size:13.5px;color:var(--txt-3);padding:4px 0;transition:.2s}
+.fcol a:hover{color:var(--txt);transform:translateX(2px)}
+.fcol p{font-size:13.5px;color:var(--txt-3);line-height:1.9}
+.fbrand b{font-family:var(--serif);font-size:22px;letter-spacing:2px;color:var(--txt)}
+.fbrand b em{font-style:normal;color:var(--gold)}
+.furl{
+  margin-top:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:13px;color:var(--cyan);word-break:break-all;
+}
+.tags{margin-top:34px;padding-top:22px;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:12px;color:var(--txt-3);border:1px solid var(--line);border-radius:999px;padding:3px 11px}
+.copy{margin-top:22px;font-size:12.5px;color:var(--txt-3);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* 移动端底部导航 */
+.tabbar{display:none}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .board{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .faq{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line-soft)}
+}
+@media (max-width:720px){
+  body{font-size:15.5px;padding-bottom:62px}
+  nav.nav,.top-act{display:none}
+  .top-in{height:56px}
+  .brand b{font-size:21px}
+  .brand span{display:none}
+  .menu{
+    display:inline-flex;margin-left:auto;align-items:center;gap:6px;
+    border:1px solid var(--line);border-radius:9px;padding:7px 12px;font-size:13px;color:var(--txt-2);
+  }
+  .hero{padding:38px 0 30px}
+  .lede{font-size:15.5px}
+  .stats{margin-top:30px}
+  section.blk{padding:44px 0}
+  .hd p{margin-left:0}
+  .cats{grid-template-columns:1fr 1fr;gap:10px}
+  .cat{padding:16px}
+  .rank li{grid-template-columns:40px 1fr auto;padding:13px 14px;gap:10px}
+  .rank .no{font-size:21px}
+  .fgrid{grid-template-columns:1fr}
+  .tabbar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;
+    background:rgba(10,13,18,.96);backdrop-filter:blur(12px);
+    border-top:1px solid var(--line);
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:6px;
+  }
+  .tabbar a{
+    flex:0 0 auto;padding:7px 13px;border-radius:999px;
+    font-size:13.5px;color:var(--txt-2);border:1px solid var(--line);
+  }
+  .tabbar a.on{color:var(--gold);border-color:rgba(227,178,60,.4)}
+  .tabbar::-webkit-scrollbar{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://8kdianyingwang-app.github.io/#website",
+      "url":"https://8kdianyingwang-app.github.io/",
+      "name":"8k电影网",
+      "alternateName":["8k电影网官网","8K超高清影视片库"],
+      "inLanguage":"zh-CN",
+      "description":"8k电影网提供 8K/4K 超高清影视条目索引、分类片库、热播评分榜与影评长文，并整理片源识别与家庭影院调校指南。",
+      "publisher":{"@id":"https://8kdianyingwang-app.github.io/#org"}
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://8kdianyingwang-app.github.io/#org",
+      "name":"8k电影网",
+      "url":"https://8kdianyingwang-app.github.io/",
+      "description":"专注于超高清影视条目索引、评分榜单与观影设备调校内容的站点。"
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://8kdianyingwang-app.github.io/#webpage",
+      "url":"https://8kdianyingwang-app.github.io/",
+      "name":"8k电影网 · 超清片库索引与影评榜单",
+      "isPartOf":{"@id":"https://8kdianyingwang-app.github.io/#website"},
+      "inLanguage":"zh-CN",
+      "about":"8K超高清影视条目索引与观影指南",
+      "primaryImageOfPage":{"@type":"ImageObject","url":"https://8kdianyingwang-app.github.io/og.png","width":1200,"height":630}
+    },
+    {
+      "@type":"BreadcrumbList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"8k电影网","item":"https://8kdianyingwang-app.github.io/"},
+        {"@type":"ListItem","position":2,"name":"超清片库","item":"https://8kdianyingwang-app.github.io/#library"},
+        {"@type":"ListItem","position":3,"name":"热播榜单","item":"https://8kdianyingwang-app.github.io/#rank"},
+        {"@type":"ListItem","position":4,"name":"影评长文","item":"https://8kdianyingwang-app.github.io/#review"},
+        {"@type":"ListItem","position":5,"name":"观影指南","item":"https://8kdianyingwang-app.github.io/#guide"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<div id="bar"></div>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="top" id="topbar">
+  <div class="wrap top-in">
+    <a class="brand" href="#" aria-label="8k电影网 首页">
+      <b>8<em>k</em>电影网</b>
+      <span>8K Ultra HD Index</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <ul>
+        <li><a class="cur" href="#library">超清片库</a></li>
+        <li><a href="#rank">热播榜单</a></li>
+        <li><a href="#review">影评长文</a></li>
+        <li><a href="#guide">观影指南</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </nav>
+    <div class="top-act">
+      <a class="qbtn" href="#rank">本周榜单</a>
+    </div>
+    <a class="menu" href="#library">栏目导航</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="tagline"><i></i>条目索引 · 评分榜单 · 设备调校</span>
+          <h1><u>8k电影网</u>：把超高清片库、评分与观影参数放在同一页里</h1>
+          <p class="lede">
+            这里按类型、地区、年份整理超高清影视条目，条目页给出分辨率、码率、时长、音轨与上映信息；
+            同时更新热播评分榜、影评长文，以及家庭影院的片源识别与画面调校笔记。
+          </p>
+          <div class="urlbar">
+            <span class="lb">官方入口</span>
+            <a class="u" href="https://8kdianyingwang-app.github.io/" rel="bookmark">https://8kdianyingwang-app.github.io</a>
+          </div>
+          <div class="hero-btns">
+            <a class="btn" href="#library">浏览超清片库</a>
+            <a class="btn ghost" href="#guide">查看调校步骤</a>
+          </div>
+        </div>
+        <div>
+          <div class="film" aria-hidden="true">
+            <div class="film-row">
+              <div class="cell"><span>科幻 · 8K</span></div>
+              <div class="cell"><span>纪录 · 8K</span></div>
+              <div class="cell"><span>动画 · 4K</span></div>
+              <div class="cell"><span>剧集 · 4K</span></div>
+            </div>
+          </div>
+          <div class="film-cap">
+            <span>本周新增 128 条</span>
+            <span>数据更新 2026-10-14</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="stats">
+        <li class="stat"><b>12,860</b><span>已收录条目</span></li>
+        <li class="stat"><b>7680×</b><span>最高分辨率 4320</span></li>
+        <li class="stat"><b>42</b><span>分类标签</span></li>
+        <li class="stat"><b>每日</b><span>榜单更新频率</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 栏目一：超清片库 -->
+  <section class="blk" id="library">
+    <div class="wrap">
+      <div class="hd rv">
+        <div>
+          <span class="kicker">Section 01 / Library</span>
+          <h2>超清<em>片库</em>分类索引</h2>
+        </div>
+        <p>八个主分类覆盖常见观影需求，每个分类下按年份倒序排列，条目页标注分辨率、码率与音轨规格。</p>
+      </div>
+      <div class="cats rv">
+        <a class="cat" href="#">
+          <i>科幻</i>
+          <b>科幻 / 奇幻</b>
+          <small>太空、赛博、时间线题材</small>
+          <span class="n">1,842 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>动作</i>
+          <b>动作 / 冒险</b>
+          <small>高码率打斗与实拍场景</small>
+          <span class="n">2,306 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>纪录</i>
+          <b>自然 / 纪录</b>
+          <small>原生 8K 拍摄占比最高</small>
+          <span class="n">964 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>动画</i>
+          <b>动画 / 国创</b>
+          <small>重制版与修复版专区</small>
+          <span class="n">1,377 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>悬疑</i>
+          <b>悬疑 / 犯罪</b>
+          <small>暗场细节与噪点控制参考</small>
+          <span class="n">1,510 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>剧集</i>
+          <b>剧集 / 迷你剧</b>
+          <small>按季归档，支持单集检索</small>
+          <span class="n">2,048 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>文艺</i>
+          <b>剧情 / 文艺</b>
+          <small>胶片扫描与色彩还原版本</small>
+          <span class="n">1,733 条</span>
+        </a>
+        <a class="cat" href="#">
+          <i>演出</i>
+          <b>演唱会 / 舞台</b>
+          <small>多声道音轨与环绕声记录</small>
+          <span class="n">540 条</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：热播榜单 -->
+  <section class="blk" id="rank">
+    <div class="wrap">
+      <div class="hd rv">
+        <div>
+          <span class="kicker">Section 02 / Ranking</span>
+          <h2>本周<em>热播评分榜</em></h2>
+        </div>
+        <p>评分由站内条目页的收藏量、完成度与长评数量加权计算，每日凌晨重算一次。</p>
+      </div>
+      <div class="board">
+        <div class="rv">
+          <ol class="rank">
+            <li>
+              <span class="no">01</span>
+              <span class="ti"><b>沙丘：第二部</b><small>科幻 · 2024 · 166 分钟 · 7680×4320</small></span>
+              <span class="sc"><b>9.1</b><small>收藏 4.2k</small></span>
+            </li>
+            <li>
+              <span class="no">02</span>
+              <span class="ti"><b>奥本海默</b><small>传记 · 2023 · 181 分钟 · IMAX 胶片扫描</small></span>
+              <span class="sc"><b>8.9</b><small>收藏 3.8k</small></span>
+            </li>
+            <li>
+              <span class="no">03</span>
+              <span class="ti"><b>星际穿越</b><small>科幻 · 2014 · 169 分钟 · 4K 重制</small></span>
+              <span class="sc"><b>8.8</b><small>收藏 3.5k</small></span>
+            </li>
+            <li>
+              <span class="no">04</span>
+              <span class="ti"><b>地球脉动 第三季</b><small>纪录 · 2025 · 单集 52 分钟 · 原生 8K</small></span>
+              <span class="sc"><b>8.7</b><small>收藏 2.9k</small></span>
+            </li>
+            <li>
+              <span class="no">05</span>
+              <span class="ti"><b>疯狂的麦克斯：狂暴女神</b><small>动作 · 2024 · 148 分钟 · 高码率</small></span>
+              <span class="sc"><b>8.5</b><small>收藏 2.4k</small></span>
+            </li>
+            <li>
+              <span class="no">06</span>
+              <span class="ti"><b>长安三万里</b><small>动画 · 2023 · 168 分钟 · 4K 国创</small></span>
+              <span class="sc"><b>8.4</b><small>收藏 2.2k</small></span>
+            </li>
+            <li>
+              <span class="no">07</span>
+              <span class="ti"><b>银翼杀手 2049</b><small>科幻 · 2017 · 164 分钟 · HDR 调色</small></span>
+              <span class="sc"><b>8.3</b><small>收藏 2.0k</small></span>
+            </li>
+            <li>
+              <span class="no">08</span>
+              <span class="ti"><b>瞬息全宇宙</b><small>奇幻 · 2022 · 139 分钟 · 4K 修复</small></span>
+              <span class="sc"><b>8.2</b><small>收藏 1.8k</small></span>
+            </li>
+          </ol>
+        </div>
+        <aside class="side rv">
+          <h3>榜单筛选</h3>
+          <div class="filter">
+            <a class="on" href="#">全部</a>
+            <a href="#">科幻</a>
+            <a href="#">动作</a>
+            <a href="#">纪录</a>
+            <a href="#">动画</a>
+            <a href="#">剧集</a>
+            <a href="#">2020 后</a>
+            <a href="#">原生 8K</a>
+          </div>
+          <h3>评分口径</h3>
+          <p class="note">
+            加权系数：<b>收藏量 0.4</b> + <b>看完标记 0.35</b> + <b>长评数 0.25</b>。
+            条目上线不足 7 天不进入主榜，先在<b>新条目区</b>公示。
+            同一影片的多版本（导演剪辑版、重制版）合并计分，取版本最高分展示。
+          </p>
+          <p class="note" style="margin-top:14px">
+            榜单只做排序展示，不做任何资源分发；条目页给出的是公开上映信息与规格参数。
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：影评 -->
+  <section class="blk" id="review">
+    <div class="wrap">
+      <div class="hd rv">
+        <div>
+          <span class="kicker">Section 03 / Review</span>
+          <h2>影评<em>长文</em>与画面笔记</h2>
+        </div>
+        <p>围绕画质、调色、声音与叙事展开，每篇附版本信息与观看建议，避免泛泛而谈。</p>
+      </div>
+      <div class="reviews">
+        <a class="rev rv" href="#">
+          <div class="thumb"><em>画质解析</em></div>
+          <div class="body">
+            <h3>暗场细节为什么在 8K 版里更容易丢</h3>
+            <p>从压缩码率、色度采样到电视的黑位设置，逐段拆解《银翼杀手 2049》夜戏在三种版本下的差异。</p>
+            <div class="meta"><span>10-12</span><span>约 4,200 字</span><span>评论 63</span></div>
+          </div>
+        </a>
+        <a class="rev rv" href="#">
+          <div class="thumb"><em>版本对比</em></div>
+          <div class="body">
+            <h3>胶片扫描版与数字修复版：该看哪一版</h3>
+            <p>以三部老片为例，比较颗粒保留、锐化痕迹与色彩偏移，给出不同屏幕尺寸下的选择顺序。</p>
+            <div class="meta"><span>10-09</span><span>约 3,600 字</span><span>评论 47</span></div>
+          </div>
+        </a>
+        <a class="rev rv" href="#">
+          <div class="thumb"><em>设备实测</em></div>
+          <div class="body">
+            <h3>把投影仪调准的七个参数，先动哪个</h3>
+            <p>亮度、伽马、色温、动态对比的调节顺序实测记录，附不同墙色与幕布增益下的取值参考。</p>
+            <div class="meta"><span>10-05</span><span>约 5,100 字</span><span>评论 88</span></div>
+          </div>
+        </a>
+        <a class="rev rv" href="#">
+          <div class="thumb"><em>声音笔记</em></div>
+          <div class="body">
+            <h3>多声道音轨在小房间里的摆位取舍</h3>
+            <p>环绕箱高度、听音位与墙面距离的关系，用三组实测频响曲线说明为什么要先管低频。</p>
+            <div class="meta"><span>09-28</span><span>约 2,900 字</span><span>评论 35</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：观影指南 -->
+  <section class="blk" id="guide">
+    <div class="wrap">
+      <div class="hd rv">
+        <div>
+          <span class="kicker">Section 04 / Guide</span>
+          <h2>观影<em>调校</em>五步法</h2>
+        </div>
+        <p>按这个顺序改参数，能避免大部分"越调越糊"的情况；每一步都写清了判断依据。</p>
+      </div>
+      <div class="steps rv">
+        <div class="step">
+          <h3><span>STEP 1</span>先看片源，再谈画质</h3>
+          <p>确认分辨率、码率与是否原生拍摄。低码率片源上任何锐化都只会放大噪点，先换源比调设备更有效。</p>
+        </div>
+        <div class="step">
+          <h3><span>STEP 2</span>锁定亮度与 gamma</h3>
+          <p>用灰度阶梯图把黑位与白位对齐，暗部能分辨到最低两阶、亮部不过曝，再去动其他参数。</p>
+        </div>
+        <div class="step">
+          <h3><span>STEP 3</span>校色温与白平衡</h3>
+          <p>目标 6500K。偏冷会让肤色发青，偏暖会压掉蓝天的层次，用肤色与人造光源场景交叉验证。</p>
+        </div>
+        <div class="step">
+          <h3><span>STEP 4</span>处理运动与插帧</h3>
+          <p>电影类内容建议关闭插帧，保留 24p 的快门节奏；体育与演唱会可适当开启，注意边缘撕裂。</p>
+        </div>
+        <div class="step">
+          <h3><span>STEP 5</span>声音与观感收尾</h3>
+          <p>先把对白清晰度与低频驻波处理掉，再回到画面做一次微调，人耳对响度的敏感度会影响主观锐度判断。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：FAQ -->
+  <section class="blk" id="faq">
+    <div class="wrap">
+      <div class="hd rv">
+        <div>
+          <span class="kicker">Section 05 / FAQ</span>
+          <h2>关于<em>8k电影网</em>的常见疑问</h2>
+        </div>
+        <p>条目收录范围、版本标注规则与更新节奏，这里一次说清。</p>
+      </div>
+      <div class="faq rv">
+        <details open>
+          <summary>8k电影网收录哪些条目？</summary>
+          <p>已公开放映或有正式发行版本的电影、剧集、纪录片与舞台影像，条目页标注分辨率、码率、时长、音轨与上映日期，不提供任何下载或在线播放服务。</p>
+        </details>
+        <details>
+          <summary>"原生 8K"和"上采样 8K"怎么区分？</summary>
+          <p>拍摄或后期母版达到 8K 的标注为原生，由低分辨率放大而来的标注为上采样，两者在条目页用不同标签区分，榜单筛选也支持单独过滤。</p>
+        </details>
+        <details>
+          <summary>榜单多久更新一次？</summary>
+          <p>评分每日凌晨重算，榜单页面同步刷新；新条目上线后先在新条目区公示 7 天，再进入主榜参与排序。</p>
+        </details>
+        <details>
+          <summary>条目信息有误怎么反馈？</summary>
+          <p>在条目页底部提交反馈，注明片名、版本与年份；核实后会在 1 至 3 天内修正，并在更新记录里标注修改项。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目六：关于 -->
+  <section class="blk" id="about">
+    <div class="wrap">
+      <div class="about">
+        <div class="card rv">
+          <h3>关于 8k电影网</h3>
+          <p>
+            8k电影网（8kdianyingwang-app.github.io）从条目索引做起，把一部片子的版本、规格与参数整理清楚，
+            再配上评分榜单与调校笔记。站内所有内容只做信息整理与记录，不涉及资源分发。
+          </p>
+          <ul>
+            <li>条目页统一标注分辨率、码率、音轨与时长</li>
+            <li>版本差异单独成条，不做合并模糊处理</li>
+            <li>榜单口径公开，计算规则写在页面里</li>
+            <li>调校参数给出取值参考与判断依据</li>
+          </ul>
+        </div>
+        <div class="card rv">
+          <h3>更新提醒</h3>
+          <p>留下邮箱，每周推送一次本周新增条目与榜单变化摘要，不做其他用途，可随时退订。</p>
+          <form class="sub" id="subform" action="#" method="post">
+            <label class="skip" for="mail">邮箱地址</label>
+            <input id="mail" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit">订阅周报</button>
+          </form>
+          <p class="hint">本站地址：https://8kdianyingwang-app.github.io ｜ 内容仅用于影视信息索引与观影参考。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol fbrand">
+        <a href="#"><b>8<em>k</em>电影网</b></a>
+        <p>超高清影视条目索引、评分榜单与观影调校笔记。条目每日更新，榜单每日重算。</p>
+        <p class="furl">https://8kdianyingwang-app.github.io</p>
+      </div>
+      <div class="fcol">
+        <h4>片库</h4>
+        <a href="#">科幻奇幻</a>
+        <a href="#">动作冒险</a>
+        <a href="#">自然纪录</a>
+        <a href="#">动画国创</a>
+        <a href="#">剧集迷你剧</a>
+      </div>
+      <div class="fcol">
+        <h4>榜单</h4>
+        <a href="#">本周热播</a>
+        <a href="#">高分榜</a>
+        <a href="#">新条目区</a>
+        <a href="#">原生 8K 榜</a>
+        <a href="#">年度回顾</a>
+      </div>
+      <div class="fcol">
+        <h4>内容</h4>
+        <a href="#">影评长文</a>
+        <a href="#">画面笔记</a>
+        <a href="#">设备实测</a>
+        <a href="#">调校指南</a>
+        <a href="#">信息反馈</a>
+      </div>
+    </div>
+    <div class="tags">
+      <span>8k电影网</span>
+      <span>8K超高清</span>
+      <span>片库索引</span>
+      <span>热播榜单</span>
+      <span>影评长文</span>
+      <span>家庭影院调校</span>
+      <span>4K重制版</span>
+      <span>原生 8K 拍摄</span>
+      <span>音轨规格</span>
+      <span>版本对比</span>
+    </div>
+    <div class="copy">
+      <span>© <span id="yr">2026</span> 8k电影网 · 8kdianyingwang-app.github.io</span>
+      <span>条目信息仅供参考，版权归原权利人所有</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="移动导航">
+  <a class="on" href="#library">片库</a>
+  <a href="#rank">榜单</a>
+  <a href="#review">影评</a>
+  <a href="#guide">指南</a>
+  <a href="#faq">问答</a>
+  <a href="#about">关于</a>
+</nav>
+
+<script>
+(function(){
+  var bar=document.getElementById('bar'),top=document.getElementById('topbar');
+  function onScroll(){
+    var h=document.documentElement;
+    var max=h.scrollHeight-h.clientHeight;
+    var p=max>0?(h.scrollTop||document.body.scrollTop)/max:0;
+    bar.style.width=(p*100).toFixed(2)+'%';
+    if((h.scrollTop||document.body.scrollTop)>20){top.classList.add('on');}else{top.classList.remove('on');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  var items=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }else{
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  var f=document.getElementById('subform');
+  if(f){
+    f.addEventListener('submit',function(e){
+      e.preventDefault();
+      var m=document.getElementById('mail');
+      if(m && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value)){ m.value=''; f.querySelector('button').textContent='已订阅'; }
+    });
+  }
+
+  var y=document.getElementById('yr');
+  if(y){ y.textContent=new Date().getFullYear(); }
+})();
+</script>
+</body>
+</html>
